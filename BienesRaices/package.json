@@ -1,0 +1,25 @@
+{
+  "name": "bienesraices",
+  "version": "1.0.0",
+  "description": "Desarrollo web con NodeJs - Bienes Raices",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "src/index.js",
+    "dev:nodemon": "nodemon",
+    "css":"postcss ./src/public/css/tailwind.css -o  ./src/public/css/app.css --watch"
+  },
+  "author": "Odafra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
+  }
+}
