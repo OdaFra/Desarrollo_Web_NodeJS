@@ -3,6 +3,7 @@
 // -> LOGIN
 const formularioLogin = (req, res) => {
   res.render("auth/login", {
+    pagina:'Inicio de sesión'
   });
 };
 
