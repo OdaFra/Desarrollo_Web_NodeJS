@@ -1,3 +1,5 @@
+import Usuario from "../models/Usuario.js";
+
 // CONTROLLERS
 
 // -> LOGIN
@@ -14,11 +16,21 @@ const formularioRegistro = (req, res) => {
   });
 };
 
-// -> Forgot muy pass
+const registrar = async (req, res) => {
+  const usuario = await Usuario.create(req.body);
+  res.json(usuario);
+};
+
+// -> Olvide mi pass
 const formularioOlvidePassword = (req, res) => {
   res.render("auth/olvide-password", {
     pagina: "Recupera tu acceso a Bienes raices",
   });
 };
 
-export { formularioLogin, formularioRegistro, formularioOlvidePassword };
+export {
+  formularioLogin,
+  formularioRegistro,
+  formularioOlvidePassword,
+  registrar,
+};
